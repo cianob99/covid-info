@@ -19,11 +19,12 @@ function App() {
     <div className="App">
       <div className="title">
         <h1>Covid-19 Stats {countryInfo.country}</h1>
-        <img src="https://disease.sh/assets/img/flags/ie.png"/>
-        <img src={countryInfo.gountry.flag}/>
+        <img src={countryInfo.countryInfo.flag}/>
+        
       </div>
       <div className="totalStats">
         <h3>Total Stats</h3>
+        <h4>Updated: {countryInfo.updated}</h4>
         <ul> 
           <li>Total Cases: {countryInfo.cases}</li>
           <li>Total Deaths: {countryInfo.totalDeaths}</li>
