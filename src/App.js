@@ -9,7 +9,7 @@ function App() {
   const [countryInfo, setCountryInfo] = useState({});
   
   const date = Date(countryInfo.updated);
-  const formattedDate = Moment(date).format('Do MMMM YYYY, h:mm:ss a'); 
+  const formattedDate = Moment(date).format('Do MMMM YYYY, h:mm:ssa'); 
 
   console.log(formattedDate);
 
@@ -22,13 +22,14 @@ function App() {
     });
   }, []);
 
-  console.log(countryInfo.updated);
+  console.log(countryInfo.deaths);
 
   return (
     <div className="App">
       <div className="title">
         <h1>Covid-19 Stats {countryInfo.country}</h1>
         <img src="https://disease.sh/assets/img/flags/ie.png" alt=""/>
+        
         <h4>Last Updated: {formattedDate}</h4>
 
         {/* <img src={countryInfo.countryInfo.flag}/> */}
@@ -45,7 +46,7 @@ function App() {
           <td className="totalStats">
             <ul>
               <li>Total Cases: {numeral(countryInfo.cases).format("0,0")}</li>
-              <li>Total Deaths: {numeral(countryInfo.totalDeaths).format("0,0")}</li>
+              <li>Total Deaths: {numeral(countryInfo.deaths).format("0,0")}</li>
               <li>Total Recovered: {numeral(countryInfo.recovered).format("0,0")}</li>
             </ul>
           </td>
