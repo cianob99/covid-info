@@ -1,11 +1,17 @@
 import React,{useEffect, useState} from "react";
 import numeral from 'numeral';
+import Moment from 'moment';
 import "./App.css";
 
 
 function App() {
 
   const [countryInfo, setCountryInfo] = useState({});
+  
+  const date = Date(countryInfo.updated);
+  const formattedDate = Moment(date).format('Do MMMM YYYY, h:mm:ss a'); 
+
+  console.log(formattedDate);
 
   useEffect(() => {
     fetch('https://disease.sh/v3/covid-19/countries/ireland')
@@ -16,12 +22,14 @@ function App() {
     });
   }, []);
 
+  console.log(countryInfo.updated);
+
   return (
     <div className="App">
       <div className="title">
         <h1>Covid-19 Stats {countryInfo.country}</h1>
-        <img src="https://disease.sh/assets/img/flags/ie.png"/>
-        <h4>Updated: {countryInfo.updated}</h4>
+        <img src="https://disease.sh/assets/img/flags/ie.png" alt=""/>
+        <h4>Last Updated: {formattedDate}</h4>
 
         {/* <img src={countryInfo.countryInfo.flag}/> */}
         
@@ -55,7 +63,7 @@ function App() {
               <li>Population: {numeral(countryInfo.population).format("0,0")}</li>
               <li>Total Tests: {numeral(countryInfo.tests).format("0,0")}</li>
               <li>Active Cases: <strong>{numeral(countryInfo.active).format("0,0")}</strong></li>
-              <li>Of which are critical: <strong>{numeral(countryInfo.critical).format("0,0")}</strong></li>
+              <li>of which are critical: <strong>{numeral(countryInfo.critical).format("0,0")}</strong></li>
             </ul>
           </td>
         </tr>
