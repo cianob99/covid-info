@@ -29,7 +29,7 @@ function App() {
     <div className="App">
       <div className="title">
         <h1>Covid-19 Stats {countryInfo.country}</h1>
-        <img src={countryInfo.countryInfo.flag}/>
+        <img src="https://disease.sh/assets/img/flags/ie.png" alt=""/>
         {/* <img src="https://disease.sh/assets/img/flags/ie.png" alt=""/> */}
         {/* <img src={countryInfo.countryInfo.flag}/> */} 
       </div>
