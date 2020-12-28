@@ -12,14 +12,30 @@ ul {
   min-width: 50%;
 }
 
+.countryList {
+  text-align: center;
+  text-align: center;
+}
+
+#countryList {
+  justify-content: space-around;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 20px;
+  display: inline-block;
+}
+
 img {
   border: 2px solid black;
+  width: 150px;
+  height: 100px;
 }
 
 .stats {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  text-align: center;
 }
 
 .totalStats, .dailyStats, .overallStats {
@@ -28,17 +44,5 @@ img {
   border-radius: 15px;
   padding: 10px;
   margin: 5%;
-  min-width: 15%;
-}
-
-h3{
-  text-align: center;
-}
-
-footer {
-  position: -webkit-sticky;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
+  min-width: 50%;
 }
