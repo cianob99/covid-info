@@ -31,7 +31,7 @@ function CountryInfo({ match }) {
     <div className="CountyInfo">
       <div className="title">
         <h1>Covid-19 Stats {info.country}</h1>
-        <h3><a href="/">Back to Country Selecion</a></h3>
+        <h3><a href="/covid-info">Back to Country Selecion</a></h3>
         <h4>Last Updated: {formattedDate}</h4>
         {/* <img src="https://disease.sh/assets/img/flags/ie.png" alt=""/> */}
         {/* <img src={countryInfo.countryInfo.flag}/> */}
@@ -66,9 +66,6 @@ function CountryInfo({ match }) {
           </ul>
         </div>
       </div>
-      <footer>
-        <h4>Last Updated: {formattedDate}</h4>
-      </footer>
     </div>
   );
 }

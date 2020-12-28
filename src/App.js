@@ -17,7 +17,7 @@ function App() {
             <div>
               <h1>Error: 404</h1>
               <h2>Page Not Found</h2>
-              <h3><a href="/">Go Back</a></h3>
+              <h3><a href="/covid-info">Go Back</a></h3>
             </div>
             } 
           />
