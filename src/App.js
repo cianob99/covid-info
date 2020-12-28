@@ -11,7 +11,7 @@ function App() {
     <Router>
       <div className='App'>
         <Switch>
-          <Route path="/" exact component={CountryList} />
+          <Route path="/covid-info" exact component={CountryList} />
           <Route path="/:country" component={CountryInfo} />
           <Route path="/" render={() => 
             <div>
